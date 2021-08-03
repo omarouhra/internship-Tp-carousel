@@ -17,10 +17,10 @@ h2 {
 }
 
 /* Carousel container */
-.carousel-container{
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
+.carousel-container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
 }
 
 /* Carousel*/
@@ -34,14 +34,26 @@ h2 {
 .next {
   position: absolute;
   right: 0;
-  top: 50%;
+  top: 40%;
   z-index: 1;
+  width: 40px;
+  height: 40px;
+  background: #fff url(/assets/4beb4317ebb605abb3096d9a1b5dbde4.svg) no-repeat;
+  background-size: cover;
+  border-radius: 50%;
 }
 .previous {
   position: absolute;
-  top: 50%;
+  top: 40%;
   z-index: 1;
+  width: 40px;
+  height: 40px;
+  background: #fff url(/assets/4beb4317ebb605abb3096d9a1b5dbde4.svg) no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  transform: rotate(180deg);
 }
+
 
 /* Carousel-item */
 .carousel-item {
@@ -60,7 +72,6 @@ h2 {
   height: 70px;
   padding: 10px;
 }
-
 
 /* Carousel pagination */
 .carousel-pagination {
