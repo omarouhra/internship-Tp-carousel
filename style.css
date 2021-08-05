@@ -26,6 +26,10 @@ button{
   gap: 50px;
 }
 
+.current-slide{
+  transform: translateY(-10px);
+}
+
 /* Carousel*/
 .carousel {
   display: flex;
@@ -83,11 +87,14 @@ button{
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 5px;
+  gap: 10px;
 }
 .carousel-pagination div {
   background-color: #fff;
   width: 10px;
   height: 10px;
   border-radius: 50%;
+}
+.current-indicator {
+  transform: scale(1.5);
 }

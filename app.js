@@ -6,17 +6,26 @@ const carousel = document.querySelector(".carousel");
 const carouselItems = document.querySelectorAll(".carousel-item");
 const next = document.querySelector(".next");
 const previous = document.querySelector(".previous");
-const indicators = document.querySelectorAll(".carousel-pagination a");
+const indicators = document.querySelector(".carousel-pagination");
+const current = indicators.querySelector(".current-indicator");
+
+let counter = 1;
+const amountToMove = carouselItems[0].clientWidth;
 
 next.addEventListener("click", () => {
-  const currentSlide = carousel.querySelector(".current-slide");
-  const nextSlide = currentSlide.nextElementSibling;
-  if (nextSlide) {
-    const amountToMove = nextSlide.getBoundingClientRect().left;
-    carousel.style.transform = `translateX(-${amountToMove}px)`;
-    currentSlide.classList.remove("current-slide");
-    nextSlide.classList.add("current-slide");
-    console.log(amountToMove);
+  console.log(current);
+
+  if (counter < 3) {
+    counter++;
+    carousel.style.transform = `translateX(-${amountToMove * counter}px)`;
+    console.log(counter);
   }
 });
- 
+
+previous.addEventListener("click", () => {
+  if (counter > 0) {
+    counter--;
+    carousel.style.transform = `translateX(-${amountToMove * counter}px)`;
+    console.log(counter);
+  }
+});
